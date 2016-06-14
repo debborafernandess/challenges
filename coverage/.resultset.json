@@ -1,0 +1,45 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/campus02/workspace/desafios/app/models/challenge.rb": [
+        1,
+        null
+      ],
+      "/home/campus02/workspace/desafios/app/controllers/challenges_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/campus02/workspace/desafios/app/controllers/application_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/campus02/workspace/desafios/app/models/user.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/campus02/workspace/desafios/app/helpers/challenges_helper.rb": [
+        0,
+        0
+      ],
+      "/home/campus02/workspace/desafios/app/helpers/application_helper.rb": [
+        0,
+        0
+      ]
+    },
+    "timestamp": 1465865967
+  }
+}
