@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160614000355) do
+ActiveRecord::Schema.define(version: 20160615010127) do
 
   create_table "challenges", force: :cascade do |t|
     t.string   "title"
@@ -19,6 +19,24 @@ ActiveRecord::Schema.define(version: 20160614000355) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  create_table "solutions", force: :cascade do |t|
+    t.integer  "started_challenge_id"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "solutions", ["started_challenge_id"], name: "index_solutions_on_started_challenge_id"
+
+  create_table "started_challenges", force: :cascade do |t|
+    t.integer  "challenge_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "finished_at"
+  end
+
+  add_index "started_challenges", ["challenge_id"], name: "index_started_challenges_on_challenge_id"
+  add_index "started_challenges", ["user_id"], name: "index_started_challenges_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

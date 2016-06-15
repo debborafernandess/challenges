@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   resources :challenges, only: [:index, :show] do
     member do
       post :start
+      post :finish
     end
   end
+
+  resources :solutions, only: [:show]
 end
